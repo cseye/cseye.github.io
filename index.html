@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSEye's home</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="CSEye's home">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'cseye',
+      repo: 'cseye/cseye.github.io',
+      auto2top: true,
+      search: [
+        '/'
+      ],
+      plugins: [
+        function (hook) {
+          var footer = [
+            '<hr/>',
+            '<footer>',
+            '<span>Copyright © 2019 <a href="https://github.com/cseye" target="_blank">CSEye</a> All rights reserved.</span>',
+            '</footer>'
+          ].join('')
+
+          hook.afterEach(function (html) {
+            return html + footer
+          })
+        }
+      ]
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-cpp.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script>
+  <script src="//unpkg.com/docsify-copy-code"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '8f16a910424d1c8af34f',
+      clientSecret: '565bdebe710bad01a82a34011cdd153d95d21d35',
+      repo: 'cseye.github.io',
+      owner: 'cseye',
+      admin: ['yanglbme'],
+      number: 1,
+      distractionFreeMode: true,
+      labels: ['talk'],
+      title: 'Comments here',
+      perPage: 15,
+    })
+  </script>
+</body>
+</html>
